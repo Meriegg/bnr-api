@@ -20,13 +20,13 @@ To self host you will need a postgres database.
 You need to install the dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Then build the project:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Then you need to create a `.env` file with the following content:
@@ -38,17 +38,17 @@ DATABASE_URL="postgresql://[USER]:[PASSWORD]@[HOST]:[PORT]/[DATABASE_NAME]"
 Then you can apply the migrations to your database:
 
 ```bash
-npx drizzle-kit migrate
+pnpm drizzle-kit migrate
 ```
 
 Then you can start to load in the exchange rates:
 
 ```bash
-npm run load
+pnpm run load
 ```
 
 And then you can start the server:
 
 ```bash
-npm run start
+pnpm run start
 ```

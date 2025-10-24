@@ -1,0 +1,30 @@
+Base API sits at: https://bnr.simpluconta.ro/rate/:date
+
+Possible query params are:
+ - `currency` which will cause the API to only return the exchange rate for that specific currency;
+ - `autoSelectLastBankDay` which will cause the API to automatically select the last bank day for the given date (if the given date is not a working bank day).
+
+Return structure is the following:
+
+{
+  "exchangeRates": [
+    {
+      "id": "a68a2bf3-a001-4cdc-99f4-f0f179aa96f5", // internal id of the exchange rate
+      "year": 2025, // number - year
+      "date": "2025-10-24", // string - YYYY-MM-DD format - the publication date of the exchange rate
+      "currency": "AED", // string - currency
+      "rate": "1.1922", // string - rate
+      "multiplier": 1, // integer - multiplier
+      "created_at": "2025-10-24T15:29:55.865Z",
+      "updated_at": null
+    },
+    ...
+  ],
+  "autoSelectedLastBankDay": null, // This represents the auto selected date. Unless `autoSelectLastBankDay` params is set to true, this will be null.
+}
+
+The error structure is the following:
+
+{
+  "error": "Error message" // string - represents the error message
+}

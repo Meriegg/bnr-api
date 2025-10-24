@@ -1,0 +1,1 @@
+ALTER TABLE "exchange_rate" ALTER COLUMN "created_at" SET DEFAULT now();

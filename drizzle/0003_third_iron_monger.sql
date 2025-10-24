@@ -1,0 +1,1 @@
+ALTER TABLE "exchange_rate" ADD COLUMN "year" integer NOT NULL;

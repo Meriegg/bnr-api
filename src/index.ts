@@ -79,7 +79,11 @@ app.get('/rate/:date', async (req: Request, res: Response) => {
 
 app.get("/what", (_, res) => {
   return res.sendFile(path.resolve("what.txt"));
-})
+});
+
+app.get("/", (_, res) => {
+  return res.sendFile(path.resolve("what.txt"));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

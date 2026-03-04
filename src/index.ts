@@ -39,7 +39,7 @@ app.get('/rate/:date', async (req: Request, res: Response) => {
     );
 
     if (autoWalkBack && !exchangeRates?.length) {
-      for (let i = 1; i < 3; i++) {
+      for (let i = 1; i < 30; i++) {
         const baseDate = new Date(req.params.date);
         baseDate.setDate(baseDate.getDate() - i);
         const date = baseDate.toISOString().split('T')[0];
